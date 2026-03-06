@@ -1,268 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Health & Safety Portal</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#f4f6f8;
-}
-
-/* HEADER */
-
-.header{
-background:#3b0ca3;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-.officer{
-margin-top:10px;
-}
-
-/* NAVBAR */
-
-.navbar{
-background:#4361ee;
-text-align:center;
-padding:12px;
-}
-
-.navbar a{
-color:white;
-text-decoration:none;
-margin:0 20px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* CONTAINER */
-
-.container{
-padding:40px 8%;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-/* CARDS */
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-.btn{
-display:inline-block;
-margin-top:15px;
-background:#3b0ca3;
-color:white;
-padding:10px 18px;
-border-radius:6px;
-cursor:pointer;
-}
-
-/* SECTIONS */
-
-.section{
-display:none;
-}
-
-.active{
-display:block;
-}
-
-</style>
-
-
-<script>
-
-function showSection(sectionId){
-
-let sections=document.querySelectorAll(".section")
-
-sections.forEach(section=>{
-section.classList.remove("active")
-})
-
-document.getElementById(sectionId).classList.add("active")
-
-}
-
-</script>
-
+<title>Safety Procedures</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 <header class="header">
-
-<h1>Health & Safety Portal</h1>
+<h1>Safety Procedures</h1>
 <p>Liebherr Appliances India Pvt Limited</p>
-
-<div class="officer">
-Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
-</div>
-
 </header>
-
 
 <nav class="navbar">
 
-<a onclick="showSection('home')">Home</a>
-<a onclick="showSection('procedures')">Safety Procedures</a>
-<a onclick="showSection('training')">Training</a>
-<a onclick="showSection('emergency')">Emergency</a>
-<a onclick="showSection('documents')">Documents</a>
+<a href="index.html">Home</a>
+<a href="procedures.html">Safety Procedures</a>
+<a href="training.html">Training</a>
+<a href="emergency.html">Emergency</a>
+<a href="documents.html">Documents</a>
 
 </nav>
 
-
-
 <div class="container">
 
-<!-- HOME -->
-
-<div id="home" class="section active">
-
-<h2>Welcome</h2>
+<h2>Safety Procedures</h2>
 
 <div class="grid">
 
 <div class="card">
-
-<h3>Safety Procedures</h3>
-<p>Machine SOP and PPE</p>
-
-<div class="btn" onclick="showSection('procedures')">Open</div>
-
+<h3>Machine Operation SOP</h3>
+<p>Standard operating procedure.</p>
 </div>
-
 
 <div class="card">
-
-<h3>Training</h3>
-<p>Safety training videos</p>
-
-<div class="btn" onclick="showSection('training')">Open</div>
-
+<h3>Lockout / Tagout</h3>
+<p>Machine maintenance safety.</p>
 </div>
-
 
 <div class="card">
-
-<h3>Emergency Info</h3>
-<p>Contacts and evacuation</p>
-
-<div class="btn" onclick="showSection('emergency')">Open</div>
-
-</div>
-
-
-<div class="card">
-
-<h3>Documents</h3>
-<p>Safety documents</p>
-
-<div class="btn" onclick="showSection('documents')">Open</div>
-
+<h3>PPE Requirements</h3>
+<p>Protective equipment guidelines.</p>
 </div>
 
 </div>
 
 </div>
-
-
-
-<!-- SAFETY PROCEDURES -->
-
-<div id="procedures" class="section">
-
-<h2>Safety Procedures</h2>
-
-<ul>
-<li>Machine Operation SOP</li>
-<li>Lockout / Tagout</li>
-<li>PPE Requirements</li>
-<li>Electrical Safety</li>
-<li>Fire Safety</li>
-</ul>
-
-</div>
-
-
-
-<!-- TRAINING -->
-
-<div id="training" class="section">
-
-<h2>Safety Training</h2>
-
-<ul>
-<li>Fire Safety Training</li>
-<li>Forklift Safety</li>
-<li>PPE Training</li>
-</ul>
-
-</div>
-
-
-
-<!-- EMERGENCY -->
-
-<div id="emergency" class="section">
-
-<h2>Emergency Information</h2>
-
-<p>
-Fire: 101<br>
-Ambulance: 108<br>
-Security Control Room: 1234
-</p>
-
-</div>
-
-
-
-<!-- DOCUMENTS -->
-
-<div id="documents" class="section">
-
-<h2>Safety Documents</h2>
-
-<ul>
-<li>Safety Policy</li>
-<li>Risk Assessment</li>
-<li>Audit Reports</li>
-</ul>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
-
-</footer>
 
 </body>
 
