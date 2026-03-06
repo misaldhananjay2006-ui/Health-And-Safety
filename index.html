@@ -2,86 +2,231 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Liebherr Appliances Safety Portal</title>
+<title>Health & Safety Portal</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+/* GENERAL */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6f8;
+}
+
+/* HEADER */
+
+.header{
+background:#3b0ca3;
+color:white;
+text-align:center;
+padding:30px 20px;
+}
+
+.header h1{
+margin:0;
+font-size:34px;
+}
+
+.header p{
+margin:8px 0;
+font-size:16px;
+}
+
+.officer{
+margin-top:10px;
+font-size:15px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#4361ee;
+text-align:center;
+padding:14px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 18px;
+font-weight:bold;
+font-size:16px;
+}
+
+.navbar a:hover{
+text-decoration:underline;
+}
+
+/* CONTENT */
+
+.container{
+padding:40px 8%;
+}
+
+.container h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* CARD GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card h3{
+margin-top:0;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+background:#3b0ca3;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#24007d;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:40px;
+background:#3b0ca3;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+.navbar a{
+display:block;
+margin:10px 0;
+}
+
+.header h1{
+font-size:26px;
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+<!-- HEADER -->
 
 <header class="header">
 
-<div class="header-left">
 <h1>Health & Safety Portal</h1>
+
 <p>Liebherr Appliances India Pvt Limited</p>
-</div>
 
-<div class="header-right">
-Safety Officer: <b>Vishal Sir</b><br>
-📞 +91 9145565688
+<div class="officer">
+Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 </div>
 
 </header>
 
-</header>
 
-<p>
-Name: Vishal Sir<br>
-Phone: <a href="tel:+919876543210">+91 9145565688</a>
-</p>
+<!-- NAVIGATION -->
 
-</div>
+<nav class="navbar">
 
-</div>
-
-<a href="index.html">Home</a>
-<a href="procedures.html">Safety Procedures</a>
-<a href="training.html">Training</a>
-<a href="emergency.html">Emergency</a>
-<a href="documents.html">Documents</a>
+<a href="#">Home</a>
+<a href="#">Safety Procedures</a>
+<a href="#">Training</a>
+<a href="#">Emergency</a>
+<a href="#">Documents</a>
 
 </nav>
 
-<section>
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
 
 <h2>Welcome</h2>
 
 <div class="grid">
 
 <div class="card">
+
 <h3>Safety Procedures</h3>
 <p>Machine SOP and PPE</p>
-<a class="btn" href="procedures.html">Open</a>
+
+<a class="btn" href="#">Open</a>
+
 </div>
 
+
 <div class="card">
+
 <h3>Training</h3>
 <p>Safety training videos</p>
-<a class="btn" href="training.html">Open</a>
+
+<a class="btn" href="#">Open</a>
+
 </div>
 
+
 <div class="card">
+
 <h3>Emergency Info</h3>
 <p>Contacts and evacuation</p>
-<a class="btn" href="emergency.html">Open</a>
+
+<a class="btn" href="#">Open</a>
+
 </div>
+
 
 <div class="card">
+
 <h3>Documents</h3>
 <p>Safety documents</p>
-<a class="btn" href="documents.html">Open</a>
+
+<a class="btn" href="#">Open</a>
+
+</div>
+
 </div>
 
 </div>
 
-</section>
+
+<!-- FOOTER -->
 
 <footer>
-© 2026 Liebherr Appliances India Pvt Ltd
+
+© 2026 Liebherr Appliances – Health & Safety Department
+
 </footer>
 
 </body>
