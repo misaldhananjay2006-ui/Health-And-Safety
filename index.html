@@ -10,11 +10,9 @@
 
 <style>
 
-/* GENERAL */
-
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 background:#f4f6f8;
 }
 
@@ -24,22 +22,11 @@ background:#f4f6f8;
 background:#3b0ca3;
 color:white;
 text-align:center;
-padding:30px 20px;
-}
-
-.header h1{
-margin:0;
-font-size:34px;
-}
-
-.header p{
-margin:8px 0;
-font-size:16px;
+padding:30px;
 }
 
 .officer{
 margin-top:10px;
-font-size:15px;
 }
 
 /* NAVBAR */
@@ -47,33 +34,24 @@ font-size:15px;
 .navbar{
 background:#4361ee;
 text-align:center;
-padding:14px;
+padding:12px;
 }
 
 .navbar a{
 color:white;
 text-decoration:none;
-margin:0 18px;
+margin:0 20px;
 font-weight:bold;
-font-size:16px;
+cursor:pointer;
 }
 
-.navbar a:hover{
-text-decoration:underline;
-}
-
-/* CONTENT */
+/* CONTAINER */
 
 .container{
 padding:40px 8%;
 }
 
-.container h2{
-text-align:center;
-margin-bottom:30px;
-}
-
-/* CARD GRID */
+/* GRID */
 
 .grid{
 display:grid;
@@ -91,10 +69,6 @@ box-shadow:0 4px 10px rgba(0,0,0,0.1);
 text-align:center;
 }
 
-.card h3{
-margin-top:0;
-}
-
 .btn{
 display:inline-block;
 margin-top:15px;
@@ -102,51 +76,46 @@ background:#3b0ca3;
 color:white;
 padding:10px 18px;
 border-radius:6px;
-text-decoration:none;
+cursor:pointer;
 }
 
-.btn:hover{
-background:#24007d;
+/* SECTIONS */
+
+.section{
+display:none;
 }
 
-/* FOOTER */
-
-footer{
-margin-top:40px;
-background:#3b0ca3;
-color:white;
-text-align:center;
-padding:15px;
-}
-
-/* MOBILE */
-
-@media (max-width:600px){
-
-.navbar a{
+.active{
 display:block;
-margin:10px 0;
-}
-
-.header h1{
-font-size:26px;
-}
-
 }
 
 </style>
+
+
+<script>
+
+function showSection(sectionId){
+
+let sections=document.querySelectorAll(".section")
+
+sections.forEach(section=>{
+section.classList.remove("active")
+})
+
+document.getElementById(sectionId).classList.add("active")
+
+}
+
+</script>
 
 </head>
 
 
 <body>
 
-<!-- HEADER -->
-
 <header class="header">
 
 <h1>Health & Safety Portal</h1>
-
 <p>Liebherr Appliances India Pvt Limited</p>
 
 <div class="officer">
@@ -156,22 +125,23 @@ Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 </header>
 
 
-<!-- NAVIGATION -->
-
 <nav class="navbar">
 
-<a href="#">Home</a>
-<a href="#">Safety Procedures</a>
-<a href="#">Training</a>
-<a href="#">Emergency</a>
-<a href="#">Documents</a>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('procedures')">Safety Procedures</a>
+<a onclick="showSection('training')">Training</a>
+<a onclick="showSection('emergency')">Emergency</a>
+<a onclick="showSection('documents')">Documents</a>
 
 </nav>
 
 
-<!-- MAIN CONTENT -->
 
 <div class="container">
+
+<!-- HOME -->
+
+<div id="home" class="section active">
 
 <h2>Welcome</h2>
 
@@ -182,7 +152,7 @@ Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 <h3>Safety Procedures</h3>
 <p>Machine SOP and PPE</p>
 
-<a class="btn" href="#">Open</a>
+<div class="btn" onclick="showSection('procedures')">Open</div>
 
 </div>
 
@@ -192,7 +162,7 @@ Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 <h3>Training</h3>
 <p>Safety training videos</p>
 
-<a class="btn" href="#">Open</a>
+<div class="btn" onclick="showSection('training')">Open</div>
 
 </div>
 
@@ -202,7 +172,7 @@ Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 <h3>Emergency Info</h3>
 <p>Contacts and evacuation</p>
 
-<a class="btn" href="#">Open</a>
+<div class="btn" onclick="showSection('emergency')">Open</div>
 
 </div>
 
@@ -212,7 +182,7 @@ Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 <h3>Documents</h3>
 <p>Safety documents</p>
 
-<a class="btn" href="#">Open</a>
+<div class="btn" onclick="showSection('documents')">Open</div>
 
 </div>
 
@@ -221,11 +191,76 @@ Safety Officer: <b>Vishal Sir</b> | 📞 +91 9145565688
 </div>
 
 
-<!-- FOOTER -->
 
-<footer>
+<!-- SAFETY PROCEDURES -->
 
-© 2026 Liebherr Appliances – Health & Safety Department
+<div id="procedures" class="section">
+
+<h2>Safety Procedures</h2>
+
+<ul>
+<li>Machine Operation SOP</li>
+<li>Lockout / Tagout</li>
+<li>PPE Requirements</li>
+<li>Electrical Safety</li>
+<li>Fire Safety</li>
+</ul>
+
+</div>
+
+
+
+<!-- TRAINING -->
+
+<div id="training" class="section">
+
+<h2>Safety Training</h2>
+
+<ul>
+<li>Fire Safety Training</li>
+<li>Forklift Safety</li>
+<li>PPE Training</li>
+</ul>
+
+</div>
+
+
+
+<!-- EMERGENCY -->
+
+<div id="emergency" class="section">
+
+<h2>Emergency Information</h2>
+
+<p>
+Fire: 101<br>
+Ambulance: 108<br>
+Security Control Room: 1234
+</p>
+
+</div>
+
+
+
+<!-- DOCUMENTS -->
+
+<div id="documents" class="section">
+
+<h2>Safety Documents</h2>
+
+<ul>
+<li>Safety Policy</li>
+<li>Risk Assessment</li>
+<li>Audit Reports</li>
+</ul>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
 
 </footer>
 
